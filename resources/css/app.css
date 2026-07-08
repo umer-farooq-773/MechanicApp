@@ -7,3 +7,57 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+
+/* Sidebar transitions */
+.sidebar {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Nav pill active state customization */
+.nav-pills .nav-link.active {
+    background-color: #0d6efd !important;
+}
+
+.nav-pills .nav-link {
+    color: #333;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+    background-color: #f8f9fa;
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 991.98px) {
+    main {
+        padding-top: 60px !important;
+    }
+}w
