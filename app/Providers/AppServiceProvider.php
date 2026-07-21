@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\Contracts\VehicleEntryRepositoryInterface;
+use App\Repositories\VehicleEntryRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+        VehicleEntryRepositoryInterface::class,
+        VehicleEntryRepository::class
+    );
     }
 
     /**

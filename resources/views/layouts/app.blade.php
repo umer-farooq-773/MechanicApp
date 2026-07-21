@@ -13,8 +13,8 @@
     <link rel="icon" href="{{ asset('assets/logo/logo.png') }}">
 <link rel="shortcut icon" href="{{ asset('assets/logo/logo.png') }}">
 <link rel="apple-touch-icon" href="{{ asset('assets/logo/logo.png') }}">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Bootstrap Icons (Free & Open Source) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -1017,57 +1017,14 @@
             <div class="nav-label">Main Menu</div>
 
             <a href="{{ route('dashboard') }}" class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                <i class="fas fa-th-large"></i>
+                <i class="bi bi-grid-fill"></i>
                 <span>Dashboard</span>
             </a>
 
-            <a href="#" class="nav-item">
-                <i class="fas fa-tasks"></i>
-                <span>Job Management</span>
+            <a href="{{ route('vehicle-entry') }}" class="nav-item">
+                <i class="bi bi-checkbox-list"></i>
+                <span>Vehicle Entry</span>
                 <span class="badge">12</span>
-            </a>
-
-            <a href="#" class="nav-item">
-                <i class="fas fa-users"></i>
-                <span>Customers</span>
-            </a>
-
-            <a href="#" class="nav-item">
-                <i class="fas fa-car-side"></i>
-                <span>Vehicles</span>
-            </a>
-
-            <a href="#" class="nav-item">
-                <i class="fas fa-wrench"></i>
-                <span>Services</span>
-            </a>
-
-            <a href="#" class="nav-item">
-                <i class="fas fa-file-invoice-dollar"></i>
-                <span>Invoices</span>
-                <span class="badge">5</span>
-            </a>
-
-            <div class="nav-label" style="margin-top:16px;">Management</div>
-
-            <a href="#" class="nav-item">
-                <i class="fas fa-calendar-check"></i>
-                <span>Appointments</span>
-            </a>
-
-            <a href="#" class="nav-item">
-                <i class="fas fa-boxes"></i>
-                <span>Inventory</span>
-            </a>
-
-            <a href="#" class="nav-item">
-                <i class="fas fa-chart-line"></i>
-                <span>Reports</span>
-            </a>
-
-            <a href="#" class="nav-item">
-                <i class="fas fa-cog"></i>
-                <span>Settings</span>
             </a>
         </div>
 
@@ -1080,7 +1037,7 @@
                     <div class="user-role">Administrator</div>
                 </div>
                 <a href="{{ route('logout') }}" class="logout-btn" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class="fas fa-sign-out-alt"></i>
+                    <i class="bi bi-box-arrow-right"></i>
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
